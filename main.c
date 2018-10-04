@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "GenerateRandomArray/GenerateRandomArray.h"
 #include "InverseOrdinal/InverseOrdinal.h"
-#include "SelectSort/SelectSort.h"
+#include "MergeSort/MergeSort.h"
 
 int main(void)
 {
@@ -12,7 +12,7 @@ int main(void)
 	printf("the ordinal before sorting is: %d\n\n", Ordinal(A, n));
 
 	Time=clock();
-	SelectSort(A, n);
+	MergeSort(A, 0, n-1);
 	Time=clock()-Time;
 	printf("spend %ld clock cycles\n",Time);
 
