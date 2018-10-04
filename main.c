@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "GenerateRandomArray/GenerateRandomArray.h"
 #include "InverseOrdinal/InverseOrdinal.h"
-#include "InsertionSort/InsertionSort.h"
+#include "SelectSort/SelectSort.h"
 
 int main(void)
 {
@@ -12,7 +12,7 @@ int main(void)
 	printf("the ordinal before sorting is: %d\n\n", Ordinal(A, n));
 
 	Time=clock();
-	InsertionSortDown(A, n);
+	SelectSort(A, n);
 	Time=clock()-Time;
 	printf("spend %ld clock cycles\n",Time);
 

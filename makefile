@@ -1,10 +1,10 @@
-try: main.o GenerateRandomArray/GenerateRandomArray.o InverseOrdinal/InverseOrdinal.o InsertionSort/InsertionSort.o
-	cc -o try main.o GenerateRandomArray/GenerateRandomArray.o InverseOrdinal/InverseOrdinal.o InsertionSort/InsertionSort.o
+try: main.o GenerateRandomArray/GenerateRandomArray.o InverseOrdinal/InverseOrdinal.o SelectSort/SelectSort.o
+	cc -o try main.o GenerateRandomArray/GenerateRandomArray.o InverseOrdinal/InverseOrdinal.o SelectSort/SelectSort.o
 
-main.o: GenerateRandomArray/GenerateRandomArray.h InverseOrdinal/InverseOrdinal.h InsertionSort/InsertionSort.h
+main.o: GenerateRandomArray/GenerateRandomArray.h InverseOrdinal/InverseOrdinal.h SelectSort/SelectSort.h
 GenerateRandomArray/GenerateRandomArray.o: GenerateRandomArray/GenerateRandomArray.h
 InverseOrdinal/InverseOrdinal.o: InverseOrdinal/InverseOrdinal.h
-InsertionSort/InsertionSort.o: InsertionSort/InsertionSort.h
+SelectSort/SelectSort.o: SelectSort/SelectSort.h
 
 main.o: main.c
 	cc -c main.c -o main.o
@@ -12,8 +12,8 @@ GenerateRandomArray/GenerateRandomArray.o: GenerateRandomArray/GenerateRandomArr
 	cc -c GenerateRandomArray/GenerateRandomArray.c -o GenerateRandomArray/GenerateRandomArray.o
 InverseOrdinal/InverseOrdinal.o: InverseOrdinal/InverseOrdinal.c
 	cc -c InverseOrdinal/InverseOrdinal.c -o InverseOrdinal/InverseOrdinal.o
-InsertionSort/InsertionSort.o: InsertionSort/InsertionSort.c
-	cc -c InsertionSort/InsertionSort.c -o InsertionSort/InsertionSort.o
+SelectSort/SelectSort.o: SelectSort/SelectSort.c
+	cc -c SelectSort/SelectSort.c -o SelectSort/SelectSort.o
 clean:
 	@rm *.o
 	@rm */*.o
