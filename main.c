@@ -2,7 +2,7 @@
 #include "GenerateRandomArray/GenerateRandomArray.h"
 #include "InverseOrdinal/InverseOrdinal.h"
 #include "MergeSort/MergeSort.h"
-#include "MergeInversions/MergeInversions.h"
+#include "Inversions/Inversions.h"
 
 int main(void)
 {
@@ -17,9 +17,12 @@ int main(void)
 	MergeSort(A, 0, n-1);
 	Time=clock()-Time;
 	printf("spend %ld clock cycles\n",Time);
+//	printf("%d\n",antiCountInversions(A, n, 0));
 
 	printf("the inverse ordinal after sorting is: %d\n", InverseOrdinal(A, n));
 	printf("the ordinal after sorting is: %d\n", Ordinal(A, n));
+	printf("%d\n",CountInversions(A, n, 0));
+	printf("%d\n",antiCountInversions(A, n, 0));
 
 	return 0;
 }

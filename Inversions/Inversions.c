@@ -1,10 +1,11 @@
-#include "MergeInversions.h"
+#include "Inversions.h"
 
 //if sort==1, count the inversions and sort the array
 //else, copy the array to a new address and count the inversions
 int CountInversions(T* A, int n, bool sort)
 {
 	int* num=(int*)malloc(sizeof(int));
+	num[0]=0;
 	int counts;
 	if(sort)
 		MergeInversions(A, 0, n-1, num);
@@ -57,6 +58,7 @@ void MergeCountInversions(T* A, int p, int q, int r, int* np)
 int antiCountInversions(T* A, int n, bool sort)
 {
 	int* num=(int*)malloc(sizeof(int));
+	num[0]=0;
 	int counts;
 	if(sort)
 		antiMergeInversions(A, 0, n-1, num);
